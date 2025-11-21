@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
 This module defines a Square class that represents a geometric square.
-It includes size validation to ensure the value is an integer and non-negative.
+It includes validation to ensure that the size value is an integer and
+that it is not negative.
 """
 
 
@@ -9,9 +10,9 @@ class Square:
     """
     Represents a square.
 
-    This class defines a square with a private size attribute. The size must be
-    a valid integer greater than or equal to zero. Validation is performed during
-    instantiation to ensure correctness of the stored value.
+    This class defines a square with a private size attribute. The size is
+    validated during instantiation to ensure that it is an integer and is
+    greater than or equal to zero.
     """
 
     def __init__(self, size=0):
@@ -19,11 +20,12 @@ class Square:
         Initialize a new Square instance.
 
         Args:
-            size (int): The size of the square. Must be an integer >= 0.
+            size (int): The size of the square. Must be an integer and
+                greater than or equal to zero.
 
         Raises:
             TypeError: If size is not an integer.
-            ValueError: If size is less than 0.
+            ValueError: If size is less than zero.
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
